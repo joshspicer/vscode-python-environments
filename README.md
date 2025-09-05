@@ -325,15 +325,144 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-## Questions, issues, feature requests, and contributions
+## Reporting Issues
 
--   If you have a question about how to accomplish something with the extension, please [ask on our Discussions page](https://github.com/microsoft/vscode-python/discussions/categories/q-a).
--   If you come across a problem with the extension, please [file an issue](https://github.com/microsoft/vscode-python).
--   Contributions are always welcome! Please see our [contributing guide](https://github.com/Microsoft/vscode-python/blob/main/CONTRIBUTING.md) for more details.
--   Any and all feedback is appreciated and welcome!
-    -   If someone has already [filed an issue](https://github.com/Microsoft/vscode-python) that encompasses your feedback, please leave a 👍/👎 reaction on the issue.
-    -   Otherwise please start a [new discussion](https://github.com/microsoft/vscode-python/discussions/categories/ideas).
--   If you're interested in the development of the extension, you can read about our [development process](https://github.com/Microsoft/vscode-python/blob/main/CONTRIBUTING.md#development-process).
+Before reporting an issue, please follow these steps to help us address your problem effectively:
+
+### 1. Check Existing Issues
+
+Search the [existing issues](https://github.com/microsoft/vscode-python-environments/issues) to see if your problem has already been reported. If you find a similar issue:
+- Add a 👍 reaction to show you're experiencing the same problem
+- Add a comment with additional details specific to your case
+
+### 2. Determine the Right Repository
+
+Issues should be reported in the appropriate repository:
+
+**Report to this repository** (`vscode-python-environments`) if the issue is related to:
+- Creating, deleting, or managing Python environments
+- Installing/uninstalling packages within environments
+- Environment selection and activation
+- Project management features
+- Environment manager integration (conda, venv, poetry, etc.)
+- Package manager features
+
+**Report to the [main Python extension](https://github.com/microsoft/vscode-python/issues)** if the issue is related to:
+- Python language features (IntelliSense, debugging, syntax highlighting)
+- Python interpreter discovery and selection (when not using this extension)
+- General Python debugging, linting, or formatting issues
+
+### 3. Gather Required Information
+
+Before filing an issue, collect the following information:
+
+#### System Information
+- **Operating System**: (e.g., Windows 11, macOS 14.0, Ubuntu 22.04)
+- **VS Code Version**: Get from `Help` → `About`
+- **Python Extension Version**: Check in Extensions view
+- **Python Environments Extension Version**: Check in Extensions view
+
+#### Environment Information
+- **Python Version(s)**: Output of `python --version` and `python3 --version`
+- **Environment Manager**: Which environment manager you're using (conda, venv, poetry, etc.)
+- **Package Manager**: Which package manager you're using (pip, conda, poetry, etc.)
+
+#### Issue Details
+- **Clear Description**: What you expected vs. what actually happened
+- **Steps to Reproduce**: Detailed steps that consistently reproduce the issue
+- **Error Messages**: Complete error messages from VS Code's Output panel or terminal
+- **Screenshots/Videos**: Visual evidence of the problem (especially for UI issues)
+
+### 4. Collect Debug Information
+
+To help diagnose issues, provide relevant logs:
+
+1. **Extension Logs**: 
+   - Open `View` → `Output`
+   - Select "Python Environments" from the dropdown
+   - Copy relevant log entries
+
+2. **Python Extension Logs** (if relevant):
+   - In the Output panel, select "Python" from the dropdown
+   - Copy relevant log entries
+
+3. **Developer Console** (for UI issues):
+   - Open `Help` → `Toggle Developer Tools`
+   - Check the Console tab for errors
+   - Include any red error messages
+
+### 5. File Your Issue
+
+When creating a new issue, include:
+
+#### For Bug Reports:
+```
+**System Information:**
+- OS: [Your OS and version]
+- VS Code: [Version number]
+- Python Extension: [Version number]  
+- Python Environments Extension: [Version number]
+- Python Version: [Output of python --version]
+
+**Environment Setup:**
+- Environment Manager: [conda/venv/poetry/etc.]
+- Package Manager: [pip/conda/poetry/etc.]
+
+**Issue Description:**
+[Clear description of the problem]
+
+**Expected Behavior:**
+[What you expected to happen]
+
+**Actual Behavior:**
+[What actually happened]
+
+**Steps to Reproduce:**
+1. [First step]
+2. [Second step]
+3. [etc.]
+
+**Error Messages:**
+```
+[Paste any error messages here]
+```
+
+**Logs:**
+[Include relevant logs from the Output panel]
+
+**Screenshots:**
+[If applicable, add screenshots to help explain the problem]
+```
+
+#### For Feature Requests:
+```
+**Feature Description:**
+[Clear description of the feature you'd like to see]
+
+**Use Case:**
+[Explain how this feature would be useful in your workflow]
+
+**Proposed Solution:**
+[If you have ideas about how this could be implemented]
+
+**Alternatives Considered:**
+[Any alternative solutions or workarounds you've considered]
+```
+
+### 6. Common Troubleshooting Steps
+
+Before filing an issue, try these common solutions:
+
+1. **Reload VS Code**: `Ctrl/Cmd + Shift + P` → "Developer: Reload Window"
+2. **Restart Extension**: Disable and re-enable the Python Environments extension
+3. **Clear Cache**: Close VS Code, delete the extension's cache files, and restart
+4. **Check Settings**: Verify your `python-envs.*` settings are correct
+5. **Update Extensions**: Ensure you have the latest versions of Python and Python Environments extensions
+
+### Questions and Discussions
+
+-   **General Questions**: For questions about how to use the extension, please [ask on our Discussions page](https://github.com/microsoft/vscode-python/discussions/categories/q-a).
+-   **Feature Ideas**: Share feature ideas in [GitHub Discussions](https://github.com/microsoft/vscode-python/discussions/categories/ideas).
 
 ## Data and telemetry
 
